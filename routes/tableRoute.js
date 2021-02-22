@@ -2,7 +2,7 @@ import express from "express";
 import User from "../models/User.js";
 const router = express.Router();
 
-router.put("/api/table/changest", async (req, res) => {
+router.put("/table/changest", async (req, res) => {
   try {
     console.log(typeof req.body);
     const { status, id } = req.body;
@@ -22,7 +22,7 @@ router.put("/api/table/changest", async (req, res) => {
   }
 });
 
-router.delete("/api/table/changest/", async (req, res) => {
+router.delete("/table/changest/", async (req, res) => {
   try {
     const { id } = req.body;
     if (id.length >= 1) {
@@ -39,7 +39,7 @@ router.delete("/api/table/changest/", async (req, res) => {
   }
 });
 
-router.put("/api/table", async (req, res) => {
+router.put("/table", async (req, res) => {
   try {
     const { id } = req.body;
     console.log(id);
@@ -61,7 +61,7 @@ router.put("/api/table", async (req, res) => {
   }
 });
 
-router.get("/api/table", async (req, res) => {
+router.get("/table", async (req, res) => {
   try {
     User.find({}, (err, users) => {
       if (err) {

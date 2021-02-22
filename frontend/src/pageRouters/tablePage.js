@@ -25,7 +25,6 @@ export const MainPage = () => {
       }
     }
     fetchdata();
-    console.log(userData);
   }, []);
 
   return (
